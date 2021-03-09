@@ -18,7 +18,7 @@ file path to the 1099 pdf file
 file path to the output csv file. If left blank `./default.csv` will be used. If full file path is not provided, the file will be created in the directory of the `1099parser.py` file. If a previously existing filename is provided, it will overwrite the existing file.
 
 ### Compile Multiple Transactions
-If `'Y'` is selected, securities that have multiple transactions will be compiled as one line, with the sum of the transactions used for the cost and proceeds. The acquired dates will be listed as `'various'`. if `'n'` is selected, securities that have multiple transactions will have each transaction individually listed in on it's own line.
+If `'Y'` is selected, securities that have multiple transactions will be compiled as one line, with the sum of the transactions used for the cost and proceeds. The acquired dates will be listed as `'various'`. if `'n'` is selected, securities that have multiple transactions will have each transaction listed individually on it's own line.
 
 ## Warning
 
