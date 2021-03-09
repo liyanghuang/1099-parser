@@ -79,7 +79,9 @@ for page in tqdm(pdf.pages):
 							date_line = lines[i]
 							if transaction_child_re.match(date_line):
 								split_date_line = date_line.split(' ')
-								csv_writer.writerow([symbol_line.split(' / ')[0]] + [date_dis] + split_date_line[:6] + [' '.join(split_date_line[6:])])
+								accrued_disc = '...' if split_date_line[4] == '...' else ' '.join(split_date_line[4:6])
+								additional_info = ' '.join(split_date_line[6:]) if split_date_line[4] == '...' else ' '.join(split_date_line[7:])
+								csv_writer.writerow([symbol_line.split(' / ')[0]] + [date_dis] + split_date_line[:4] + [accrued_disc] + [additional_info])
 								trans_counter += 1
 						# after we are done, we skip to the next symbol line
 						while i < len(lines) and not symbol_re.match(date_line):
@@ -92,7 +94,9 @@ for page in tqdm(pdf.pages):
 				# match the dateline regex which includes compiled transactions
 				if date_re.match(date_line):
 					split_date_line = date_line.split(' ')
-					csv_writer.writerow([symbol_line.split(' / ')[0]] + split_date_line[:7] + [' '.join(split_date_line[7:])])
+					accrued_disc = '...' if split_date_line[5] == '...' else ' '.join(split_date_line[5:7])
+					additional_info = ' '.join(split_date_line[7:]) if split_date_line[5] == '...' else ' '.join(split_date_line[8:])
+					csv_writer.writerow([symbol_line.split(' / ')[0]] + split_date_line[:5] + [accrued_disc] +[additional_info] )
 				i+= 1
 				if i < len(lines):
 					date_line = lines[i]
