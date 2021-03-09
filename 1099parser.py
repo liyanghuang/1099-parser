@@ -71,7 +71,7 @@ for page in tqdm(pdf.pages):
 					if transaction_re.match(date_line):
 						# if it is, we pull out the number, and the date for all of them
 						num_transactions = int(date_line.split(' ')[0])
-						date_dis = date_line.split(' ')[3]
+						date_dis = date_line.split(' ')[3][:8]
 						trans_counter = 0
 						# next we iterate through to capture all the individual transactions
 						while trans_counter < num_transactions:
