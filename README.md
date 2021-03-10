@@ -8,6 +8,7 @@ Parses the trade information for each trade.
 1. have python installed
 2. clone this repository: `$ git clone https://github.com/liyanghuang/1099-parser.git` or download the `1099parser.py` file in the repository above.
 3. run the script: `$ python 1099parser.py`
+4. follow the instructions and input what the script asks you to imput
 
 ## Options
 
