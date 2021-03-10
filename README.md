@@ -10,7 +10,7 @@ Parses the trade information for each trade.
 3. run the script: `$ python 1099parser.py`
 4. follow the instructions and input what the script asks you to imput
 
-## Options
+## Usage Arguments (what the script will ask for)
 
 ### Input:
 file path to the 1099 pdf file
