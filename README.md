@@ -7,8 +7,9 @@ Parses the trade information for each trade.
 
 1. have python installed. If you don't have it installed download it here: https://www.python.org/downloads/
 2. clone this repository: `$ git clone https://github.com/liyanghuang/1099-parser.git` **OR** download the `1099parser.py` file in the repository above.
-3. run the script: `$ python 1099parser.py`
-4. follow the instructions and input what the script asks you to input
+3. install dependencies: `$ pip install pdfplumber tqdm`
+4. run the script: `$ python 1099parser.py`
+5. follow the instructions and input what the script asks you to input
 
 ## Usage Arguments (what the script will ask for)
 
